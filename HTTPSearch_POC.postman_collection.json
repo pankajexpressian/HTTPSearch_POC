@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "b3834144-743a-4aeb-9136-fe4bc21dd018",
+		"name": "HTTPSearch_POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27982068"
+	},
+	"item": [
+		{
+			"name": "HttpSearchWithoutParameters",
+			"request": {
+				"method": "SEARCH",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7086/Product/Search",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Product",
+						"Search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HttpSearchWithQueryStringParameter",
+			"request": {
+				"method": "SEARCH",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7086/Product/SearchQuery?query=lap",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Product",
+						"SearchQuery"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "lap"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HttpSearchWithBody",
+			"request": {
+				"method": "SEARCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\":\"laptop\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7086/Product/SearchBody",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7086",
+					"path": [
+						"Product",
+						"SearchBody"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "lap",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
